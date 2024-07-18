@@ -40,24 +40,24 @@ public class NewAccountPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void enterFirstName(String firstname) {
-        firstNameInput.sendKeys(firstname);
+    public void enterFirstName(String firstName) {
+        enterText(firstNameInput, firstName);
     }
 
-    public void enterLastName(String lastname) {
-        lastNameInput.sendKeys(lastname);
+    public void enterLastName(String lastName) {
+        enterText(lastNameInput, lastName);
     }
 
     public void enterEmail(String email) {
-        emailInput.sendKeys(email);
+        enterText(emailInput, email);
     }
 
     public void enterPassword(String password) {
-        passwordInput.sendKeys(password);
+        enterText(passwordInput, password);
     }
 
     public void enterConfirmedPassword(String confirmedPassword) {
-        confirmedPasswordInput.sendKeys(confirmedPassword);
+        enterText(confirmedPasswordInput, confirmedPassword);
     }
 
     public void createNewAccount() {

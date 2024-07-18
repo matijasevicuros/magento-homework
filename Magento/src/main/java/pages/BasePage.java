@@ -21,8 +21,8 @@ public class BasePage {
     }
 
     protected void enterText(WebElement element, String text) {
-        wait.until(ExpectedConditions.visbilityOfElement(element));
-        element.sendkeys(text);
+        wait.until(ExpectedConditions.visibilityOf(element));
+        element.sendKeys(text);
     }
 
     protected void waitForElementsToBeVisible(By by) {
