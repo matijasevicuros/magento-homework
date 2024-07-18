@@ -20,6 +20,10 @@ public class BasePage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
+    protected void enterText(WebElement element, String text) {
+        wait.until(ExpectedConditions.visbilityOfElement(element));
+        element.sendkeys(text);
+    }
 
     protected void waitForElementsToBeVisible(By by) {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
